@@ -57,11 +57,11 @@ export function HeroRomantico({ puntosBesos, onSumarBeso }: HeroRomanticoProps) 
             <div className="w-full h-56 sm:h-72 rounded-lg overflow-hidden relative bg-surface-container">
               <Image
                 src={majoPolaroid.imagenUrl}
-                alt="Majo con girasoles — momento romántico"
+                alt="Majo sonriendo — el amor de mi vida"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
-                unoptimized
                 sizes="(max-width: 640px) 280px, 320px"
+                priority
               />
               <div className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 bg-surface/90 backdrop-blur-sm px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full flex items-center gap-1 shadow-sm">
                 <span

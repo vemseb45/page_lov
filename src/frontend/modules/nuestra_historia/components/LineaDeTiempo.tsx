@@ -157,7 +157,6 @@ function KeepsakeImagen({ momento }: { momento: MomentoHistoria }) {
           alt={momento.titulo}
           fill
           className="object-cover"
-          unoptimized
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"
         />
         <div className="absolute bottom-2.5 left-2.5 sm:bottom-3 sm:left-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded-full text-primary font-label-sm text-label-sm flex items-center gap-1 text-[10px] sm:text-[11px]">

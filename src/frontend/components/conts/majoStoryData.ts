@@ -19,8 +19,7 @@ export const majoTimeline: MomentoHistoria[] = [
     lado: 'izquierda',
     variante: 'primary',
     keepsakeType: 'image',
-    imagenUrl:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAF-A27uf4gD93agYvaJyCCSPza10tVVj3uR4b2tWv8B7AatbKKS7sm5pCEcBXDh3anpqF1ra0-Z_ftb_qjO4Q4ghgaJHM0y-Rxrq9ZMAOV0GeRwovTwCGMxscVy0U0TUL_hHJkceyinymykdiMIBbVhWRkRl91s_1yOmkNNhQtymiwMQbgaT6h79CywsHtqEZ1pfoUFFwFBXVDj2sVKdc-PP7rH-2zP7WL4mrDUeFQXlC49-z0Z-jc',
+    imagenUrl: '/fotos de majo y yo.jpg',
   },
   {
     id: 2,
@@ -73,8 +72,7 @@ export const majoTimeline: MomentoHistoria[] = [
     lado: 'derecha',
     variante: 'secondary',
     keepsakeType: 'image',
-    imagenUrl:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBqe6KqRoN60HWv_CpajubtRfsb9OlrXWU6diarMeQSHFBL05pGoNTkF0L-9VvRGdxHktXIU64wO03KNzUSi6dOWQxht58hVCUu7oX4Hyipvq0-UUjjkeCu8Cp-viB6Uu3jVolCprPFrbcV-hgBLOFntVWM1h4K5KWkhaUbRJKm7qvri-9vlHzYpRzERBSgUI454Y3H4Pwdeo603MQ3D3tUksGKyel9DWhRId6WZgztqsIMmlQrH7PH',
+    imagenUrl: '/arbol salitre.jpg',
   },
   {
     id: 5,
@@ -124,8 +122,7 @@ export const majoTimeline: MomentoHistoria[] = [
     lado: 'izquierda',
     variante: 'primary',
     keepsakeType: 'image',
-    imagenUrl:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAcKjaBB_YNxouFdxsK38bIQ7MHsKUYiEwDoCu1qaLoKqppyYTmEmrpQeYWa9eu7-7-ysymsasvHCk4yaNlzfB9DbhGbIRxUNZBXdZnDEpGBO2sR1EGVMeFhT3Y277wlOi9qAqytTbTFngec3pvroy1xGfKzFYlTv7RiH4PT-o4I1OJy5V4eu7nT1gzvc9ivKxPIY_Io0q2aj-yVP5W-fhWJaMFbAmp1uZPssO-4apUpj3flMteBGyH',
+    imagenUrl: '/otraaa.jpg',
   },
   {
     id: 8,
@@ -236,8 +233,7 @@ export const majoTimeline: MomentoHistoria[] = [
     lado: 'izquierda',
     variante: 'primary',
     keepsakeType: 'image',
-    imagenUrl:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDqI_3qmPdi6VZMbs2C2TGPCGKlP6agmps3oJfRYfWbiYjmyBiN_uezV99RlFsSxHXvTITKh554iYpmS07nYscx-83bRYxx1FVggA-Wwd0OhRfHHHYvrinaaLxQUb6bB-lGlBrwvXmEnhpKnL9Uu9vUae8HEEaXpyf7VbuH3r3kk5Kgq4aws3QtjvmP3OizkjKpQrreU4bxfwmk9ksQVsXPFVBDgbaaGe_cVtyiwPvT90HxgQMIr-xn',
+    imagenUrl: '/moto.jpg',
   },
 
   // ── 2026: EL AMOR CONSOLIDADO ────────────────────────────────
@@ -305,8 +301,7 @@ export const majoFiltros: FiltroHistoria[] = [
 
 // ── Polaroid Hero ─────────────────────────────────────────────
 export const majoPolaroid = {
-  imagenUrl:
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuATMSvKRVEU-bN7oIRg-rjQ4nk3I6mTJ9k-v49j2B173eUrwiXwtLpb25QDk0yLjbuCm4-6JUx_AvF6TQmcYdnY05WD_13h-Jh-Lp8rPwNSaEO5HLClh3SomulGammOh_n6xDYiQlEh_xnufZ3VqOzdsjd0QDwChG2tgKSEGPiZ73v9tXrKunWrD8sgZxUat-jS1v3Oo9KATydpQc-SRUAkqiqyezwN80Lt-z744x8aoFVbxHUfTl1N',
+  imagenUrl: '/sonrisa majo.jpg',
   cita: '"Tu sonrisa desarma todo mi mundo"',
-  subtitulo: '',
+  subtitulo: 'Crónica 2025 • Majo & Yo',
 };

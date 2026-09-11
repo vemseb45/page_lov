@@ -1,14 +1,7 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'lh3.googleusercontent.com',
-      },
-    ],
-  },
+  // Todas las imágenes son locales desde /public — no se necesitan dominios externos
 };
 
 export default nextConfig;

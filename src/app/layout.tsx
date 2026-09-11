@@ -21,7 +21,14 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: 'Nuestra Historia • Majo & Yo ♥️',
   description:
-    'Una carta de amor interactiva dedicada a María José (Majo) — nuestra historia documentada desde junio 2025.',
+    'Una carta de amor interactiva dedicada a Majo — nuestra historia documentada desde junio 2025.',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 };
 
 export const viewport: Viewport = {
