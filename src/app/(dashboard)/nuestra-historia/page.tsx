@@ -17,17 +17,26 @@ const NAV_LINKS = [
 function DiscoVinilo() {
   return (
     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-      <circle cx="50" cy="50" r="48" fill="#1a1a1a" />
-      <circle cx="50" cy="50" r="44" fill="none" stroke="#2a2a2a" strokeWidth="1.2" />
-      <circle cx="50" cy="50" r="39" fill="none" stroke="#2a2a2a" strokeWidth="1.2" />
-      <circle cx="50" cy="50" r="34" fill="none" stroke="#2a2a2a" strokeWidth="1.2" />
-      <circle cx="50" cy="50" r="29" fill="none" stroke="#2a2a2a" strokeWidth="1.2" />
-      <circle cx="50" cy="50" r="23" fill="#6c0c28" />
-      <circle cx="50" cy="50" r="19" fill="none" stroke="#8b263e" strokeWidth="0.8" />
-      <text x="50" y="47" textAnchor="middle" fill="#ffd9dd" fontSize="6.5" fontFamily="serif" fontStyle="italic">Amor de</text>
-      <text x="50" y="56" textAnchor="middle" fill="#ffd9dd" fontSize="6.5" fontFamily="serif" fontStyle="italic">Primavera</text>
-      <circle cx="50" cy="50" r="3.5" fill="#1a1a1a" />
-      <circle cx="50" cy="50" r="48" fill="none" stroke="#2a2a2a" strokeWidth="1" />
+      {/* Cuerpo negro del vinilo */}
+      <circle cx="50" cy="50" r="49" fill="#0a0a0a" />
+      {/* Brillo sutil del borde */}
+      <circle cx="50" cy="50" r="49" fill="none" stroke="#1a1a1a" strokeWidth="1.5" />
+      {/* Surcos del vinilo — negro profundo */}
+      <circle cx="50" cy="50" r="45" fill="none" stroke="#181818" strokeWidth="1.3" />
+      <circle cx="50" cy="50" r="41" fill="none" stroke="#181818" strokeWidth="1.3" />
+      <circle cx="50" cy="50" r="37" fill="none" stroke="#181818" strokeWidth="1.3" />
+      <circle cx="50" cy="50" r="33" fill="none" stroke="#181818" strokeWidth="1.3" />
+      <circle cx="50" cy="50" r="29" fill="none" stroke="#181818" strokeWidth="1.3" />
+      {/* Etiqueta central — rojo vibrante */}
+      <circle cx="50" cy="50" r="23" fill="#cc0000" />
+      {/* Anillo interior de la etiqueta */}
+      <circle cx="50" cy="50" r="20" fill="none" stroke="#e83333" strokeWidth="0.8" />
+      <circle cx="50" cy="50" r="17" fill="none" stroke="#e83333" strokeWidth="0.5" />
+      {/* Texto de la etiqueta */}
+      <text x="50" y="46" textAnchor="middle" fill="#ffffff" fontSize="6.5" fontFamily="serif" fontStyle="italic" fontWeight="600">Amor de</text>
+      <text x="50" y="55" textAnchor="middle" fill="#ffffff" fontSize="6.5" fontFamily="serif" fontStyle="italic" fontWeight="600">Primavera</text>
+      {/* Agujero central */}
+      <circle cx="50" cy="50" r="3.8" fill="#0a0a0a" />
     </svg>
   );
 }
@@ -101,8 +110,8 @@ export default function NuestraHistoriaPage() {
               className="flex items-center gap-1.5 sm:gap-2 bg-surface-container-low px-2 sm:px-3 py-1.5 rounded-full hover:bg-secondary-container/30 active:bg-secondary-container/50 transition-colors group touch-manipulation"
               title="Amor de Primavera — Conjunto Chaney"
             >
-              {/* Disco vinilo giratorio */}
-              <div className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 shrink-0 animate-spin-slow">
+              {/* Disco vinilo giratorio — más grande */}
+              <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 shrink-0 animate-spin-slow">
                 <DiscoVinilo />
               </div>
 
@@ -124,16 +133,23 @@ export default function NuestraHistoriaPage() {
               </span>
             </a>
 
-            {/* Botón hamburguesa — solo móvil */}
+            {/* Botón 3 puntos — solo móvil */}
             <button
               onClick={() => setMenuAbierto((v) => !v)}
               className="md:hidden w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-surface-container-low hover:bg-surface-container transition-colors touch-manipulation"
               aria-label={menuAbierto ? 'Cerrar menú' : 'Abrir menú'}
               aria-expanded={menuAbierto}
             >
-              <span className="material-symbols-outlined text-primary text-[20px]">
-                {menuAbierto ? 'close' : 'menu'}
-              </span>
+              {menuAbierto
+                ? <span className="material-symbols-outlined text-primary text-[20px]">close</span>
+                : (
+                  <span className="flex flex-col items-center gap-[3.5px]">
+                    <span className="w-[4px] h-[4px] rounded-full bg-primary block" />
+                    <span className="w-[4px] h-[4px] rounded-full bg-primary block" />
+                    <span className="w-[4px] h-[4px] rounded-full bg-primary block" />
+                  </span>
+                )
+              }
             </button>
           </div>
         </div>
@@ -168,7 +184,7 @@ export default function NuestraHistoriaPage() {
               onClick={() => setMenuAbierto(false)}
               className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-surface-container-low mt-1 hover:bg-secondary-container/30 transition-colors touch-manipulation"
             >
-              <div className="w-9 h-9 shrink-0 animate-spin-slow">
+              <div className="w-10 h-10 shrink-0 animate-spin-slow">
                 <DiscoVinilo />
               </div>
               <div className="flex flex-col leading-none flex-1">

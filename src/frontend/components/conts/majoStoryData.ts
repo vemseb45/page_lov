@@ -33,13 +33,8 @@ export const majoTimeline: MomentoHistoria[] = [
     categoria: 'juegos',
     lado: 'derecha',
     variante: 'secondary',
-    keepsakeType: 'card',
-    cardContenido: {
-      icono: '',
-      titulo: '',
-      texto:
-        '',
-    },
+    keepsakeType: 'image',
+    imagenUrl: '/fiesta.jpg',
   },
   {
     id: 3,
