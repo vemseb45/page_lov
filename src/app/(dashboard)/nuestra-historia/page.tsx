@@ -8,11 +8,29 @@ import { LineaDeTiempo } from '@/frontend/modules/nuestra_historia/components/Li
 import { CartaAmorFinal } from '@/frontend/modules/nuestra_historia/components/CartaAmorFinal';
 
 const NAV_LINKS = [
-  { label: 'Inicio',           href: '#inicio' },
-  { label: 'Línea de Tiempo',  href: '#timeline' },
-  { label: 'Nuestra Química',  href: '#quimica' },
-  { label: 'Carta de Amor',    href: '#carta' },
+  { label: 'Inicio',          href: '#inicio',   icono: '' },
+  { label: 'Línea de Tiempo', href: '#timeline', icono: '' },
+  { label: 'Carta de Amor',   href: '#carta',    icono: '' },
 ];
+
+/* ── Disco de vinilo SVG reutilizable ── */
+function DiscoVinilo() {
+  return (
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <circle cx="50" cy="50" r="48" fill="#1a1a1a" />
+      <circle cx="50" cy="50" r="44" fill="none" stroke="#2a2a2a" strokeWidth="1.2" />
+      <circle cx="50" cy="50" r="39" fill="none" stroke="#2a2a2a" strokeWidth="1.2" />
+      <circle cx="50" cy="50" r="34" fill="none" stroke="#2a2a2a" strokeWidth="1.2" />
+      <circle cx="50" cy="50" r="29" fill="none" stroke="#2a2a2a" strokeWidth="1.2" />
+      <circle cx="50" cy="50" r="23" fill="#6c0c28" />
+      <circle cx="50" cy="50" r="19" fill="none" stroke="#8b263e" strokeWidth="0.8" />
+      <text x="50" y="47" textAnchor="middle" fill="#ffd9dd" fontSize="6.5" fontFamily="serif" fontStyle="italic">Amor de</text>
+      <text x="50" y="56" textAnchor="middle" fill="#ffd9dd" fontSize="6.5" fontFamily="serif" fontStyle="italic">Primavera</text>
+      <circle cx="50" cy="50" r="3.5" fill="#1a1a1a" />
+      <circle cx="50" cy="50" r="48" fill="none" stroke="#2a2a2a" strokeWidth="1" />
+    </svg>
+  );
+}
 
 export default function NuestraHistoriaPage() {
   const [menuAbierto, setMenuAbierto] = useState(false);
@@ -29,22 +47,25 @@ export default function NuestraHistoriaPage() {
   } = useNuestraHistoria();
 
   return (
-    <div className="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container min-h-screen">
+    <div className="bg-surface text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container min-h-screen">
 
-      {/* ══════════════════════════════════════════════════════════
-          NAVBAR — fijo, mobile-first con menú hamburguesa
-      ══════════════════════════════════════════════════════════ */}
-      <header className="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_12px_rgba(108,12,40,0.06)]">
-        <div className="h-16 sm:h-20 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
+      {/* ══════════ NAVBAR ══════════════════════════════════════ */}
+      <header className="fixed top-0 w-full z-50 bg-surface/92 backdrop-blur-md shadow-[0_1px_12px_rgba(108,12,40,0.07)]">
+        <div className="h-14 sm:h-16 lg:h-20 max-w-[1200px] mx-auto px-3 sm:px-6 lg:px-12 flex items-center justify-between gap-2">
 
-          {/* Logo */}
-          <a href="#inicio" className="group flex items-center gap-2">
-            <span className="font-headline-sm text-[16px] sm:text-headline-sm text-primary tracking-normal">
+          {/* Logo — siempre visible */}
+          <a href="#inicio" className="group flex items-center gap-1.5 shrink-0">
+            <span
+              className="material-symbols-outlined text-primary text-[18px] sm:text-[20px] group-hover:scale-110 transition-transform"
+              style={{ fontVariationSettings: "'FILL' 1" }}
+            >
+            </span>
+            <span className="font-headline-sm text-[14px] sm:text-[16px] lg:text-[22px] text-primary tracking-normal leading-none">
               Nuestra Historia
             </span>
           </a>
 
-          {/* Badge estado — solo xl */}
+          {/* Badge — solo xl */}
           <div className="hidden xl:flex items-center gap-2 bg-surface-container-low px-3 py-1 rounded-full shadow-[0_0_12px_rgba(212,139,151,0.2)]">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             <span className="font-label-sm text-label-sm text-primary">
@@ -70,26 +91,43 @@ export default function NuestraHistoriaPage() {
           </nav>
 
           {/* Acciones derecha */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* Canción — oculto en móvil muy pequeño */}
-            <div className="hidden sm:flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-full">
-              <span className="material-symbols-outlined text-primary text-[16px] sm:text-[18px]"></span>
-              <span className="font-label-sm text-label-sm text-on-surface-variant hidden lg:inline text-[11px]">
-                Nuestra Canción
-              </span>
-              <span className="material-symbols-outlined text-on-surface-variant text-[14px] sm:text-[16px] cursor-pointer hover:text-primary transition-colors">
-              </span>
-            </div>
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
 
-            {/* Avatar */}
-            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary flex items-center justify-center ring-2 ring-secondary-container/40">
-              <span className="material-symbols-outlined text-on-primary text-[14px] sm:text-[18px]"></span>
-            </div>
+            {/* Nuestra Canción — SIEMPRE visible en todos los tamaños */}
+            <a
+              href="https://open.spotify.com/track/6ubUesAyvYV5ktyTlRvfXe?si=yk4HiUUfTXW6vj9KnnqoCg&utm_source=whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 sm:gap-2 bg-surface-container-low px-2 sm:px-3 py-1.5 rounded-full hover:bg-secondary-container/30 active:bg-secondary-container/50 transition-colors group touch-manipulation"
+              title="Amor de Primavera — Conjunto Chaney"
+            >
+              {/* Disco vinilo giratorio */}
+              <div className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 shrink-0 animate-spin-slow">
+                <DiscoVinilo />
+              </div>
 
-            {/* Hamburguesa — solo móvil */}
+              {/* Texto — desde sm en adelante */}
+              <div className="hidden sm:flex flex-col leading-none">
+                <span className="font-label-sm text-primary font-semibold leading-none text-[9px] sm:text-[10px]">
+                  Nuestra Canción
+                </span>
+                <span className="text-on-surface-variant leading-none mt-0.5 text-[8px] hidden lg:block">
+                  Amor de Primavera
+                </span>
+              </div>
+
+              {/* Ícono play */}
+              <span
+                className="material-symbols-outlined text-primary group-hover:text-secondary transition-colors text-[14px] sm:text-[15px]"
+                style={{ fontVariationSettings: "'FILL' 1" }}
+              >
+              </span>
+            </a>
+
+            {/* Botón hamburguesa — solo móvil */}
             <button
               onClick={() => setMenuAbierto((v) => !v)}
-              className="md:hidden w-9 h-9 flex items-center justify-center rounded-full bg-surface-container-low hover:bg-surface-container transition-colors touch-manipulation"
+              className="md:hidden w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-surface-container-low hover:bg-surface-container transition-colors touch-manipulation"
               aria-label={menuAbierto ? 'Cerrar menú' : 'Abrir menú'}
               aria-expanded={menuAbierto}
             >
@@ -102,58 +140,67 @@ export default function NuestraHistoriaPage() {
 
         {/* Menú móvil desplegable */}
         {menuAbierto && (
-          <div className="md:hidden bg-surface/95 backdrop-blur-md border-t border-outline-variant/30 px-4 py-4 flex flex-col gap-1 animate-slide-up">
+          <div className="md:hidden bg-surface/96 backdrop-blur-md border-t border-outline-variant/30 px-4 py-3 flex flex-col gap-1 animate-slide-up">
             {NAV_LINKS.map((item, i) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setMenuAbierto(false)}
                 className={[
-                  'flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg transition-colors touch-manipulation',
+                  'flex items-center gap-3 px-4 py-2.5 rounded-xl font-label-lg transition-colors touch-manipulation text-[13px]',
                   i === 0
                     ? 'bg-primary-container text-on-primary'
                     : 'text-on-surface-variant hover:bg-surface-container-low hover:text-primary',
                 ].join(' ')}
               >
-                <span className="material-symbols-outlined text-[18px]">
-                  {['home', 'timeline', 'favorite', 'mail'].at(i)}
+                <span className="material-symbols-outlined text-[17px]">
+                  {item.icono}
                 </span>
                 {item.label}
               </a>
             ))}
 
-            {/* Canción en menú móvil */}
-            <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-surface-container-low mt-1">
-              <span className="material-symbols-outlined text-primary text-[18px]">music_note</span>
-              <span className="font-label-lg text-label-lg text-on-surface-variant flex-1 text-[13px]">
-                Nuestra Canción
+            {/* Nuestra canción en el menú */}
+            <a
+              href="https://open.spotify.com/track/6ubUesAyvYV5ktyTlRvfXe?si=yk4HiUUfTXW6vj9KnnqoCg&utm_source=whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMenuAbierto(false)}
+              className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-surface-container-low mt-1 hover:bg-secondary-container/30 transition-colors touch-manipulation"
+            >
+              <div className="w-9 h-9 shrink-0 animate-spin-slow">
+                <DiscoVinilo />
+              </div>
+              <div className="flex flex-col leading-none flex-1">
+                <span className="font-label-lg text-on-surface-variant text-[13px]">
+                  Nuestra Canción
+                </span>
+                <span className="font-label-sm text-primary text-[11px] mt-0.5">
+                  Amor de Primavera — Conjunto Chaney
+                </span>
+              </div>
+              <span
+                className="material-symbols-outlined text-primary text-[20px]"
+                style={{ fontVariationSettings: "'FILL' 1" }}
+              >
               </span>
-              <span className="material-symbols-outlined text-on-surface-variant text-[18px] cursor-pointer hover:text-primary">
-                play_arrow
-              </span>
-            </div>
+            </a>
           </div>
         )}
       </header>
 
-      {/* ══════════════════════════════════════════════════════════
-          CONTENIDO PRINCIPAL
-      ══════════════════════════════════════════════════════════ */}
-      <main id="inicio" className="w-full pt-16 sm:pt-20 bg-surface min-h-screen">
+      {/* ══════════ CONTENIDO PRINCIPAL ═══════════════════════════ */}
+      <main id="inicio" className="w-full pt-14 sm:pt-16 lg:pt-20 bg-surface min-h-screen">
         <div className="flex flex-col w-full overflow-x-hidden">
 
-          {/* Hero con stats y polaroid */}
           <HeroRomantico puntosBesos={puntosBesos} onSumarBeso={sumarBeso} />
 
-          {/* Filtros de categoría */}
           <div id="timeline">
             <FiltrosHistoria filtroActivo={filtroActivo} onFiltroChange={setFiltro} />
           </div>
 
-          {/* Línea de tiempo zig-zag */}
           <LineaDeTiempo momentos={momentosFiltrados} puntosBesos={puntosBesos} />
 
-          {/* Carta final + Footer + Toast */}
           <div id="carta">
             <CartaAmorFinal
               onEnviarAbrazo={enviarAbrazovirtual}

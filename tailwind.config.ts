@@ -65,8 +65,10 @@ const config: Config = {
         xl: '0.75rem',
         full: '9999px',
       },
-      fontFamily: {
-        // Playfair Display — para títulos
+      animation: {
+        'spin-slow': 'spin 4s linear infinite',
+      },
+      fontFamily: {        // Playfair Display — para títulos
         'display-lg':        ['var(--font-playfair)', 'Georgia', 'serif'],
         'headline-lg':       ['var(--font-playfair)', 'Georgia', 'serif'],
         'headline-md':       ['var(--font-playfair)', 'Georgia', 'serif'],
