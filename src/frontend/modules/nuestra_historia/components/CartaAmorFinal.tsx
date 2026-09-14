@@ -29,36 +29,37 @@ export function CartaAmorFinal({
               >
               </span>
               <span className="font-headline-sm text-[18px] sm:text-headline-sm text-primary leading-snug">
-                Mi Carta de Amor para Ti, mi amor
+                Mi Carta de Amor
               </span>
             </div>
             <span className="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold text-[10px] sm:text-[11px]">
-              Agosto 2025
+              Septiembre 2026
             </span>
           </div>
 
           {/* Cuerpo */}
           <div className="space-y-4 sm:space-y-5 text-on-surface-variant leading-relaxed">
             <p className="font-headline-md text-[20px] sm:text-headline-md text-primary italic">
-              Mi hermosa María José:
+              Mi Noviecita:
             </p>
 
             <p className="font-body-md text-[15px] sm:text-body-lg leading-relaxed">
               No me enamoré de ti por casualidad ni por un impulso pasajero. Me enamoré de la mujer
-              que sabe competir riéndose en una cancha de básquet, de la que no teme hablar con
-              ternura de niña chiquita, y de la que ilumina un bus abarrotado de gente simplemente
-              soltando una carcajada cómplice conmigo.
+              que sabe competir riéndose en una cancha de básquet, de la que me reta en cualquier
+              cosa, de la niña consentida que llena mi vida de ternura, y de esa mujer que al
+              principio veía tan seria pero que terminó convirtiéndose en mi hogar.
             </p>
 
             <p className="font-body-md text-[15px] sm:text-body-lg leading-relaxed">
-              Me enamoré de tu fuerza con uniforme y botas, de tu delicadeza con pijamas de satín,
-              y de esa devoción infinita que le tienes a Mulán y a tus girasoles. Eres el 94% de
-              armonía en una canción y el 100% de paz en mi vida.
+              Me enamoré de ti por tu risa, por tus ojos y porque todo de ti me enamora más cada
+              día. Al hacer esto no puedo evitar pensar que yo no suelo hacer esta clase de cosas;
+              de hecho, es la primera vez que me pongo a desarrollar una página web como esta, pero
+              por ti nació el deseo de crear algo tan especial como lo que sentimos.
             </p>
 
             <p className="font-body-md text-[15px] sm:text-body-lg leading-relaxed">
-              Prometo seguir acumulando cada uno de ese millón de besos, cuidarte cuando estés
-              consentida, y elegirte todos los días del mundo.
+              Prometo seguir acumulando cada uno de ese millón de besos, cuidarte en cada momento,
+              seguir siendo tu cómplice incondicional y elegirte todos los días del mundo.
             </p>
           </div>
 

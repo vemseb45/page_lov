@@ -131,14 +131,8 @@ export const majoTimeline: MomentoHistoria[] = [
     categoria: 'intimidad',
     lado: 'derecha',
     variante: 'secondary',
-    keepsakeType: 'card',
-    cardContenido: {
-      icono: 'attractions',
-      titulo: 'Salitre Mágico',
-      texto:
-        'El día en que mis dudas se evaporaron por completo. Dicen que las atracciones extremas como las de Salitre Mágico ayudan a enamorarse, pero lo que sentí no fue adrenalina pasajera; fue la certeza de que quería sostener tu mano en cada caída libre. Acepté sin miedo que estaba enamorado de ti.',
-      pie: 'El día que mi corazón te eligió',
-    },
+    keepsakeType: 'image',
+    imagenUrl: '/amor.jpg',
   },
 
   // ── AGOSTO 2025 ──────────────────────────────────────────────
@@ -154,13 +148,8 @@ export const majoTimeline: MomentoHistoria[] = [
     categoria: 'intimidad',
     lado: 'izquierda',
     variante: 'primary',
-    keepsakeType: 'card',
-    cardContenido: {
-      icono: '',
-      titulo: 'Nuestro Calorcito y Paz',
-      texto:
-        'Esos momentos en los que me siento tan pleno y tranquilo contigo que simplemente no quiero hacer nada más. El tiempo parece detenerse lentamente, pero al mismo tiempo vuela porque estar a tu lado es la sensación más hermosa del mundo.',
-    },
+    keepsakeType: 'image',
+    imagenUrl: '/juntos.jpg',
   },
   {
     id: 10,
@@ -203,13 +192,8 @@ export const majoTimeline: MomentoHistoria[] = [
     categoria: 'musica',
     lado: 'derecha',
     variante: 'tertiary',
-    keepsakeType: 'card',
-    cardContenido: {
-      icono: '',
-      titulo: 'Noches que no tienen precio',
-      texto:
-        'De tus pijamas de satín y las cobijas, al debate más apasionado de LeBron vs Curry. Contigo no hay noche aburrida.',
-    },
+    keepsakeType: 'image',
+    imagenUrl: '/spidi.jpg',
   },
   {
     id: 13,
@@ -223,14 +207,8 @@ export const majoTimeline: MomentoHistoria[] = [
     categoria: 'intimidad',
     lado: 'izquierda',
     variante: 'primary',
-    keepsakeType: 'card',
-    cardContenido: {
-      icono: '',
-      titulo: 'El Ramo Inolvidable',
-      texto:
-        'Jamás olvidaré la frase que me dijiste y me marcó el alma: "¿Esto es en serio? Esto no me pasa a mí". Un momento hermoso, divertido y grabado al detalle en mi corazón.',
-      pie: '17 de diciembre de 2025 • Nuestro título oficial',
-    },
+    keepsakeType: 'image',
+    imagenUrl: '/el dia.jpg',
   },
 
   // ── 2026: EL AMOR CONSOLIDADO ────────────────────────────────
