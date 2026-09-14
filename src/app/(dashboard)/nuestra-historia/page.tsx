@@ -26,11 +26,11 @@ function DiscoVinilo() {
       <circle cx="50" cy="50" r="37" fill="none" stroke="#181818" strokeWidth="1.3" />
       <circle cx="50" cy="50" r="33" fill="none" stroke="#181818" strokeWidth="1.3" />
       <circle cx="50" cy="50" r="29" fill="none" stroke="#181818" strokeWidth="1.3" />
-      {/* Etiqueta central — rojo vibrante */}
-      <circle cx="50" cy="50" r="23" fill="#cc0000" />
+      {/* Etiqueta central — vinotinto */}
+      <circle cx="50" cy="50" r="23" fill="#6c0c28" />
       {/* Anillo interior de la etiqueta */}
-      <circle cx="50" cy="50" r="20" fill="none" stroke="#e83333" strokeWidth="0.8" />
-      <circle cx="50" cy="50" r="17" fill="none" stroke="#e83333" strokeWidth="0.5" />
+      <circle cx="50" cy="50" r="20" fill="none" stroke="#8b263e" strokeWidth="0.8" />
+      <circle cx="50" cy="50" r="17" fill="none" stroke="#8b263e" strokeWidth="0.5" />
       {/* Texto de la etiqueta */}
       <text x="50" y="46" textAnchor="middle" fill="#ffffff" fontSize="6.5" fontFamily="serif" fontStyle="italic" fontWeight="600">Amor de</text>
       <text x="50" y="55" textAnchor="middle" fill="#ffffff" fontSize="6.5" fontFamily="serif" fontStyle="italic" fontWeight="600">Primavera</text>

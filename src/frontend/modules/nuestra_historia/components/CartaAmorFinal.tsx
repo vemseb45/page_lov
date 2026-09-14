@@ -189,7 +189,7 @@ export function CartaAmorFinal({
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            {['Inicio', 'Línea de Tiempo', 'Nuestra Química', 'Carta de Amor'].map((link) => (
+            {['Inicio', 'Línea de Tiempo','Carta de Amor'].map((link) => (
               <a
                 key={link}
                 href="#"
