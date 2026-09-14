@@ -278,4 +278,5 @@ export const majoFiltros: FiltroHistoria[] = [
 export const majoPolaroid = {
   imagenUrl: '/sonrisa majo.jpg',
   cita: '"Tu sonrisa desarma todo mi mundo"',
+  subtitulo: '— Majo, el amor de mi vida 💌',
 };
