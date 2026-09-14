@@ -151,12 +151,12 @@ function KeepsakeImagen({ momento }: { momento: MomentoHistoria }) {
   if (!momento.imagenUrl) return null;
   return (
     <div className="bg-surface-container-lowest p-3 sm:p-4 rounded-2xl shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow">
-      <div className="h-44 sm:h-48 w-full rounded-xl overflow-hidden bg-surface-container relative">
+      <div className={`w-full rounded-xl overflow-hidden bg-surface-container relative ${momento.imagenUrl === '/juntos.jpg' ? 'h-[268px] sm:h-[300px]' : 'h-44 sm:h-48'}`}>
         <Image
           src={momento.imagenUrl}
           alt={momento.titulo}
           fill
-          className="object-cover"
+          className={`object-cover ${momento.imagenUrl === '/juntos.jpg' ? 'rotate-180' : ''}`}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"
         />
         <div className="absolute bottom-2.5 left-2.5 sm:bottom-3 sm:left-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded-full text-primary font-label-sm text-label-sm flex items-center gap-1 text-[10px] sm:text-[11px]">

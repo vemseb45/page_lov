@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useNuestraHistoria } from '@/frontend/hooks/useNuestraHistoria';
 import { HeroRomantico } from '@/frontend/modules/nuestra_historia/components/HeroRomantico';
-import { FiltrosHistoria } from '@/frontend/modules/nuestra_historia/components/FiltrosHistoria';
 import { LineaDeTiempo } from '@/frontend/modules/nuestra_historia/components/LineaDeTiempo';
 import { CartaAmorFinal } from '@/frontend/modules/nuestra_historia/components/CartaAmorFinal';
 
@@ -212,7 +211,6 @@ export default function NuestraHistoriaPage() {
           <HeroRomantico puntosBesos={puntosBesos} onSumarBeso={sumarBeso} />
 
           <div id="timeline">
-            <FiltrosHistoria filtroActivo={filtroActivo} onFiltroChange={setFiltro} />
           </div>
 
           <LineaDeTiempo momentos={momentosFiltrados} puntosBesos={puntosBesos} />

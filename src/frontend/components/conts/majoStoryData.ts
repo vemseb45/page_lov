@@ -26,7 +26,7 @@ export const majoTimeline: MomentoHistoria[] = [
     fecha: '24 de junio de 2025',
     titulo: 'Razón 2: Tu calidez y tu alegría genuina',
     descripcion:
-      'Tu hermosa disposición para celebrar la vida. Cuando me invitaste al Día del Aprendiz prometiendo "regalar abrazos" y motivándome a sacar mis mejores pasos de baile.',
+      'Tu hermosa disposición para celebrar la vida. Cuando me invitaste al Día del Aprendiz prometiendo "regalar abrazos" y motivándome a sacar mis mejores pasos de baile (No baile casi :v).',
     etiqueta: '🤗 Abrazos Gratis • Bailando Contigo',
     icono: '',
     iconoEtiqueta: '',
