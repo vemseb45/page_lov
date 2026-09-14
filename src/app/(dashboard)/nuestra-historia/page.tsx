@@ -78,7 +78,7 @@ export default function NuestraHistoriaPage() {
           <div className="flex items-center gap-1.5 sm:gap-2 bg-surface-container-low px-2.5 sm:px-3 py-1 rounded-full shadow-[0_0_12px_rgba(212,139,151,0.2)] min-w-0">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shrink-0" />
             <span className="font-label-sm text-primary truncate text-[9px] sm:text-[10px] xl:text-label-sm">
-              <span className="hidden sm:inline">2025 • </span>Cada día más enamorado
+              <span className="hidden sm:inline"> </span>Cada día más enamorado
             </span>
           </div>
 

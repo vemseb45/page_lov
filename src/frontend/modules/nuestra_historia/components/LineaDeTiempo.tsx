@@ -196,7 +196,7 @@ function KeepsakeMusica() {
           </span>
         </div>
         <span className="font-headline-md text-[22px] sm:text-headline-md text-secondary-container font-bold">
-          94%
+          97%
         </span>
       </div>
 
