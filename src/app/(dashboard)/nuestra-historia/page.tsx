@@ -140,7 +140,7 @@ export default function NuestraHistoriaPage() {
               aria-expanded={menuAbierto}
             >
               {menuAbierto
-                ? <span className="material-symbols-outlined text-primary text-[20px]">close</span>
+                ? <span className="material-symbols-outlined text-primary text-[20px]"></span>
                 : (
                   <span className="flex flex-col items-center gap-[3.5px]">
                     <span className="w-[4px] h-[4px] rounded-full bg-primary block" />

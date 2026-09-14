@@ -1,5 +1,7 @@
 'use client';
 
+import { useState, useRef } from 'react';
+
 interface CartaAmorFinalProps {
   onEnviarAbrazo: () => void;
   toastVisible: boolean;
@@ -11,10 +13,25 @@ export function CartaAmorFinal({
   toastVisible,
   toastMensaje,
 }: CartaAmorFinalProps) {
+  const [modalAbierto, setModalAbierto] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  function abrirModal() {
+    setModalAbierto(true);
+  }
+
+  function cerrarModal() {
+    setModalAbierto(false);
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  }
+
   return (
     <>
       {/* ── Sección carta ── */}
-      <section className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-12 pb-16 sm:pb-24">
+      <section id="carta" className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-12 pb-10 sm:pb-16">
         <div className="relative bg-surface-container-lowest p-6 sm:p-8 md:p-14 rounded-3xl shadow-xl border border-outline-variant/40 overflow-hidden">
 
           {/* Glow decorativo */}
@@ -63,13 +80,13 @@ export function CartaAmorFinal({
             </p>
           </div>
 
-          {/* Pie: firma + botón */}
+          {/* Pie: firma + botón abrazo */}
           <div className="mt-8 sm:mt-10 pt-5 sm:pt-6 border-t border-surface-variant flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
               <span className="font-headline-sm text-[20px] sm:text-headline-sm text-primary italic block">
                 Siempre tuyo ♥️
               </span>
-              <span className="font-label-sm text-label-sm text-on-surface-variant text-[11px] sm:text-[11px]">
+              <span className="font-label-sm text-label-sm text-on-surface-variant text-[11px]">
                 Para Majo, el amor más lindo de mi vida.
               </span>
             </div>
@@ -83,7 +100,80 @@ export function CartaAmorFinal({
             </button>
           </div>
         </div>
+
+        {/* ── Botón de video ── */}
+        <div className="mt-6 flex justify-center px-4">
+          <button
+            onClick={abrirModal}
+            className="group w-full sm:w-auto flex items-center justify-center gap-3 px-6 py-4 bg-surface-container-lowest border border-outline-variant/40 rounded-2xl shadow-sm hover:shadow-md hover:border-primary/40 transition-all active:scale-95 touch-manipulation"
+          >
+            <span className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors text-[22px]">
+              🎥
+            </span>
+            <span className="text-left">
+              <span className="block font-label-lg text-on-surface text-[13px] sm:text-[14px]">
+                😉 Prueba en video
+              </span>
+              <span className="block font-label-sm text-secondary italic text-[11px] sm:text-[12px] mt-0.5">
+                El día que caíste rendida
+              </span>
+            </span>
+          </button>
+        </div>
       </section>
+
+      {/* ── Modal de video ── */}
+      {modalAbierto && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/75 backdrop-blur-sm"
+          onClick={(e) => { if (e.target === e.currentTarget) cerrarModal(); }}
+        >
+          <div className="relative w-full max-w-2xl bg-surface-container-lowest rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden border border-outline-variant/30 animate-fade-in">
+
+            {/* Header del modal */}
+            <div className="flex items-center justify-between px-4 sm:px-5 py-3 sm:py-4 border-b border-surface-variant">
+              <div className="flex items-center gap-2">
+                <span
+                  className="material-symbols-outlined text-primary text-[18px] sm:text-[20px]"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                </span>
+                <span className="font-headline-sm text-[14px] sm:text-[17px] text-primary leading-snug">
+                  El día que caíste rendida 😉
+                </span>
+              </div>
+              <button
+                onClick={cerrarModal}
+                className="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-container-high transition-colors touch-manipulation shrink-0"
+                aria-label="Cerrar video"
+              >
+                <span className="material-symbols-outlined text-on-surface-variant text-[18px]"></span>
+              </button>
+            </div>
+
+            {/* Video */}
+            <div className="bg-black w-full">
+              <video
+                ref={videoRef}
+                src="/video.mp4"
+                controls
+                autoPlay
+                muted
+                playsInline
+                className="w-full max-h-[55vh] sm:max-h-[65vh] object-contain"
+              />
+            </div>
+
+            {/* Footer del modal */}
+            <div className="px-4 sm:px-5 py-2.5 sm:py-3 flex items-center gap-2 bg-surface-container-lowest">
+              <span className="material-symbols-outlined text-secondary text-[13px] sm:text-[14px]"></span>
+              <span className="font-label-sm text-on-surface-variant text-[10px] sm:text-[11px]">
+                Solo para los ojos de Majo 💌
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ── Footer ── */}
       <footer className="w-full bg-surface-container-low py-8 sm:py-12">
@@ -95,7 +185,7 @@ export function CartaAmorFinal({
           </div>
 
           <p className="font-headline-sm text-[16px] sm:text-headline-sm italic text-primary max-w-xs sm:max-w-xl leading-snug">
-            "Encontré en tu mirada el refugio eterno donde siempre quiero quedarme."
+            &ldquo;Encontré en tu mirada el refugio eterno donde siempre quiero quedarme.&rdquo;
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
@@ -121,7 +211,6 @@ export function CartaAmorFinal({
         role="status"
         aria-live="polite"
         className={[
-          /* Base: ocupa casi todo el ancho en móvil, auto en desktop */
           'fixed bottom-5 sm:bottom-8 left-1/2 -translate-x-1/2',
           'w-[calc(100%-2rem)] sm:w-auto max-w-sm sm:max-w-none',
           'bg-inverse-surface text-inverse-on-surface',
