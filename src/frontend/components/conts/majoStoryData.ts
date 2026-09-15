@@ -9,9 +9,9 @@ export const majoTimeline: MomentoHistoria[] = [
   {
     id: 1,
     fecha: '20 de junio de 2025',
-    titulo: 'Razón 1: Tu espíritu lúdico y tu capacidad para sorprenderme',
+    titulo: 'Razón 1: Tu espíritu unico y tu capacidad para sorprenderme',
     descripcion:
-      'Cuando jugamos baloncesto y voleibol; jurabas no saber jugar pero me sorprendiste con tu increíble destreza y me "robaste la magia". Eres divertida, competitiva y me cautivaste al instante con esa chispa que no se apaga.',
+      'Ese día que jugamos baloncesto me dijiste que no sabías jugar, ¡pero me sorprendiste ! Y sí, ese mismo día que te "robaste mi magia". Ese día me di cuenta de tu espíritu competitivo y de una energía que te caracteriza: "la buena vibra."',
     etiqueta: '',
     icono: '',
     iconoEtiqueta: '',
@@ -26,7 +26,7 @@ export const majoTimeline: MomentoHistoria[] = [
     fecha: '24 de junio de 2025',
     titulo: 'Razón 2: Tu calidez y tu alegría genuina',
     descripcion:
-      'Tu hermosa disposición para celebrar la vida. Cuando me invitaste al Día del Aprendiz prometiendo "regalar abrazos" y motivándome a sacar mis mejores pasos de baile (No baile casi :v).',
+      'Este día fue el día del aprendiz, en el que estabas muy estresada. A pesar de que no hubo apoyo del Sena ni nada, sacaste una solución y tuviste la mejor disposición. A pesar de que no bailé :v y de que te vi muy brava, me gustó estar ahí solo por ti, y porque dijiste que estabas dando abrazos gratis solo por bailar.',
     etiqueta: '🤗 Abrazos Gratis • Bailando Contigo',
     icono: '',
     iconoEtiqueta: '',
@@ -38,11 +38,11 @@ export const majoTimeline: MomentoHistoria[] = [
   },
   {
     id: 3,
-    fecha: '25 - 26 de junio de 2025',
+    fecha: '',
     titulo: 'Razón 3: La profunda atracción hacia tu autenticidad',
     descripcion:
-      'Me fascinas en todas tus facetas, desde lo más cotidiano y despreocupado. Decirte que con tus gafas te ves preciosa es solo el reflejo más sincero de una admiración que brota de lo más profundo de mi ser. Eres hermosa sin esfuerzo.',
-    etiqueta: '👓 Autenticidad Pura • Mi Niña Linda',
+      'Me encantas en todas tus facetas: desde la Majo en pijama (¡que me encanta!), la Majo consentida, la Majo brava, la Majo mamá regañona, hasta la Majo corporativa con gafas, que te ves bien preciosa :3.',
+    etiqueta: '• 👓 Autenticidad Pura •',
     icono: '',
     iconoEtiqueta: '',
     categoria: 'intimidad',
@@ -59,8 +59,8 @@ export const majoTimeline: MomentoHistoria[] = [
     fecha: '9 de julio de 2025',
     titulo: 'Razón 4: Tu vulnerabilidad y tu confianza plena en mí',
     descripcion:
-      'Conocer tu faceta de "niña chiquita". Que te sintieras tan segura, protegida y en confianza a mi lado como para hablarme como bebé tras salir a comer helado; esa tierna intimidad emocional es el tesoro más sagrado que guardo.',
-    etiqueta: '🍦 Helado Juntos • Mi Niña Chiquita',
+      'Conocer tu faceta de "niña chiquita". Este día fue cuando me comenzaste a hablar como una bebé, cuando fuimos a comer helado y también me contaste que tus helados favoritos eran los de Crepes y no los de Popsy (y yo :O), y tambien que eres fan de probar todos los sabores de helado.',
+    etiqueta: '• 🍦 Helado Juntos •',
     icono: '',
     iconoEtiqueta: '',
     categoria: 'intimidad',
@@ -71,10 +71,10 @@ export const majoTimeline: MomentoHistoria[] = [
   },
   {
     id: 5,
-    fecha: '16 de julio de 2025',
-    titulo: 'Razón 5: Tu humildad y gratitud en momentos atípicos',
+    fecha: '',
+    titulo: 'Razón 5: Tu manera descomplicada',
     descripcion:
-      'Apreciar mi compañía incondicional sin importar el escenario. Valorar unas ricas empanadas calientes o permitirme acompañarte a "chismear" en una funeraria durante un momento familiar retador. Estar juntos es todo lo que verdaderamente cuenta.',
+      'A pesar de los escenarios, tú siempre estás ahí conmigo, así sea en un andén y estar echando chistes , estar en un parque viendo un partido de fútbol y estar jugando como niños pequeños, esos momentos son los mas lindos para mi. No importa el lugar donde estemos, tu disposición siempre está ahí.',
     etiqueta: '🥟 Empanadas con Amor • Incondicionales Siempre',
     icono: '',
     iconoEtiqueta: '',
@@ -95,7 +95,7 @@ export const majoTimeline: MomentoHistoria[] = [
     fecha: '16 de julio de 2025',
     titulo: 'Razón 6: Nuestra innegable compatibilidad',
     descripcion:
-      'El increíble 97% de match en Spotify. Desde el jazz más sofisticado para reflexionar, hasta el perreo intenso para reír, el vallenato que desgarra el pecho y cantar a todo pulmón con Luis Alfonso.',
+      'Este día hicimos nuestra Fusión en Spotify, donde teníamos una compatibilidad del 94% que actualmente está en el 97%. Es curioso que seamos tan compatibles pero a la vez tan diferentes; creo que eso nos caracteriza... no lo sé, pero simplemente, al fin y al cabo, podemos sacar nuestra verdadera versión.',
     etiqueta: '🎵 97% Spotify Match • Del Jazz al Perreo y Luis Alfonso',
     icono: '',
     iconoEtiqueta: '',
@@ -107,9 +107,9 @@ export const majoTimeline: MomentoHistoria[] = [
   {
     id: 7,
     fecha: '25 de julio de 2025',
-    titulo: 'Razón 7: Tu esencia pura, tus pasiones y tu capacidad de asombro',
+    titulo: 'Razón 7: Tu muchosidad',
     descripcion:
-      'los girasoles radiantes y las legendarias "chanclas de tiburón", sumado a descubrir tu amor fiel por Mulán. Tu felicidad infantil y desprevenida me derrite por completo.',
+      'Este día fue tu cumpleaños. A pesar del regalo que te di, te sorprendió bastante que tuviera este gesto por ti; por lo que me cuentas, te pusiste nerviosa pero a la vez feliz. Simplemente unos girasoles y unas chanclas de tiburón te hicieron feliz.',
     etiqueta: '🌻 Girasoles & Chanclas Tiburón 🦈 • Mulán en el Corazón',
     icono: '',
     iconoEtiqueta: '',
@@ -124,7 +124,7 @@ export const majoTimeline: MomentoHistoria[] = [
     fecha: '31 de agosto de 2025',
     titulo: 'Razón 8: El instante en que me enamoré de ti',
     descripcion:
-      'El día en que mis dudas se evaporaron por completo. Dicen que las atracciones extremas como las de Salitre Mágico ayudan a enamorarse, pero lo que sentí no fue adrenalina pasajera; fue la certeza de que quería sostener tu mano en cada caída libre. Acepté sin miedo que estaba enamorado de ti.',
+      'El día en el que me di cuenta de que ya no era un gusto, sino que quería algo más allá de un gusto; tal vez las atracciones "extremas" tuvieron algo que ver, pero como te lo he mencionado antes, este día tomé mi decisión de que no ibas a ser un gusto pasajero.',
     etiqueta: '🎢 Salitre Mágico • El Día que mi Corazón te Eligió',
     icono: '',
     iconoEtiqueta: '',
@@ -135,13 +135,12 @@ export const majoTimeline: MomentoHistoria[] = [
     imagenUrl: '/amor.jpg',
   },
 
-  // ── AGOSTO 2025 ──────────────────────────────────────────────
   {
     id: 9,
     fecha: '',
     titulo: 'Razón 9: La paz de detener el tiempo a tu lado',
     descripcion:
-      'Esos momentos en los que me siento tan pleno y tranquilo contigo que simplemente no quiero hacer nada más. Sentir ese calorcito bonito de nuestra relación, donde por instantes el tiempo parece detenerse lentamente, pero al mismo tiempo vuela porque estar a tu lado es la sensación más hermosa del mundo.',
+      'Esos momentos en los que me siento tan tranquilo contigo que simplemente no quiero hacer nada más. Sentir ese calorcito bonito de nuestra relación, donde por instantes el tiempo parece detenerse lentamente, pero al mismo tiempo vuela.',
     etiqueta: '⏳ Tiempo Detenido • Nuestro Calorcito y Paz',
     icono: '',
     iconoEtiqueta: '',
@@ -156,7 +155,7 @@ export const majoTimeline: MomentoHistoria[] = [
     fecha: '',
     titulo: 'Razón 10: La certeza de una lealtad inquebrantable',
     descripcion:
-      'La madurez, complicidad y humor con el que vivimos cada día me hacen sentir el hombre más seguro del mundo. Amo estar con una mujer seria, firme y real. Sé perfectamente la certeza y lealtad recíproca que tenemos; nuestro amor es transparencia absoluta y en tus brazos no hay dudas.',
+      'La madurez en nuestra relación me gusta tanto... no hay ninguna razón por la que pueda llegar a desconfiar de ti o que me generes algún tipo de inseguridad; simplemente tener conversaciones maduras y hablar de las cosas que hemos hecho en nuestras vidas, la manera en que molestamos o nos "celamos" es única, o así lo siento yo. Amo estar con una mujer como tu.',
     etiqueta: '🛡️ Seguridad & Lealtad • Transparencia Pura',
     icono: '',
     iconoEtiqueta: '',
@@ -171,7 +170,7 @@ export const majoTimeline: MomentoHistoria[] = [
     fecha: '',
     titulo: 'Razón 11: El reto de la Olla Exprés y el juego de los besos',
     descripcion:
-      'Imposible olvidar cuando empezamos a molestar con que a cierta cantidad de besos nos íbamos a ganar una olla exprés. Es demasiado divertido recordar cómo nació ese juego tan nuestro... y lo mejor de todo es que estoy completamente seguro de que esa meta ya la recontra alcanzamos.',
+      'Imposible olvidar cuando empezamos a molestar con que a cierta cantidad de besos nos íbamos a ganar una olla exprés. Es demasiado divertido recordar cómo nació ese juego tan nuestro... y lo mejor de todo es que estoy seguro de que esa meta ya la alcanzamos.',
     etiqueta: '🍲 Meta Cumplida • Millones de Besos & Risas',
     icono: '',
     iconoEtiqueta: '',
@@ -185,7 +184,7 @@ export const majoTimeline: MomentoHistoria[] = [
     fecha: '',
     titulo: 'Razón 12: De la NBA al chisme de señoras pensionadas',
     descripcion:
-      'Me enamora locamente cómo me sigues las bobadas y te apasionas con las cosas que me gustan, desde la NBA hasta los videojuegos. Pasar de hablar de básquet a ponernos a chismear juntos como si fuéramos dos señoras pensionadas es la complicidad más divertida y hermosa que existe.',
+      'Me enamora cómo me sigues las bobadas y te apasionas con las cosas que me gustan, desde la NBA hasta los videojuegos. Pasar de hablar de básquet a ponernos a chismear juntos como si fuéramos dos señoras pensionadas es la complicidad más divertida y hermosa.',
     etiqueta: '🏀 NBA, Videojuegos & Chisme • Dos Señoras Pensionadas',
     icono: '',
     iconoEtiqueta: '',
@@ -198,10 +197,10 @@ export const majoTimeline: MomentoHistoria[] = [
   {
     id: 13,
     fecha: '17 de diciembre de 2025',
-    titulo: 'Razón 13: El día que lo hicimos oficial ("Esto no me pasa a mí")',
+    titulo: 'Razón 13: El día que lo hicimos oficial',
     descripcion:
-      'El día que nuestra historia tuvo título oficial. Ya estaba totalmente decidido a decírtelo, cargando con nervios ese ramo gigante de flores tras mucho tiempo sin hacerlo. Jamás olvidaré la frase que me dijiste y me marcó el alma: "¿Esto es en serio? Esto no me pasa a mí". Un momento hermoso, divertido y grabado al detalle en mi corazón.',
-    etiqueta: '💐 17 de Diciembre • "Esto no me pasa a mí" & El Ramo Inolvidable',
+      'El día que nuestra historia tuvo título oficial. Ya estaba totalmente decidido a decírtelo, ese dia cargando el ramo por toda la septima me temblaban las piernas :D estaba muy nervioso. Jamás olvidaré la frase que me dijiste cuando te pase a Vianca: "¿Esto es en serio? Esto no me pasa a mí". Un momento muy lindo para mi.',
+    etiqueta: '💐•  17 de Diciembre • ',
     icono: '',
     iconoEtiqueta: '',
     categoria: 'intimidad',

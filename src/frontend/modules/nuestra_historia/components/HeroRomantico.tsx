@@ -42,9 +42,7 @@ export function HeroRomantico({ puntosBesos, onSumarBeso }: HeroRomanticoProps) 
           </span>
         </h1>
         <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto leading-relaxed text-[14px] sm:text-[16px] lg:text-[18px]">
-          Desde una perspectiva del alma y la psicología: el amor que siento por ti no es
-          superficial, es una conexión indestructible forjada en vulnerabilidad, risas cómplices y
-          admiración pura.
+          El amor que siento por ti no es superficial, es una conexión indestructible, siendo cómplices de nuestras bobadas y eligiéndonos cada día.
         </p>
       </div>
 
