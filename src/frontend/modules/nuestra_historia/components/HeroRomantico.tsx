@@ -42,7 +42,7 @@ export function HeroRomantico({ puntosBesos, onSumarBeso }: HeroRomanticoProps) 
           </span>
         </h1>
         <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto leading-relaxed text-[14px] sm:text-[16px] lg:text-[18px]">
-          El amor que siento por ti no es superficial, es una conexión indestructible, siendo cómplices de nuestras bobadas y eligiéndonos cada día.
+          El amor que siento por ti no es superficial, es una conexión indestructible, siendo cómplices de nuestras bobadas y eligiéndonos cada día, y pensar que todo comenzo por un cafe...
         </p>
       </div>
 
