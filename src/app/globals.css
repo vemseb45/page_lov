@@ -85,4 +85,137 @@
       transform: translateY(0);
     }
   }
+
+  /* ══════════════════════════════════════════════
+     GIFT MODAL ANIMATIONS
+  ══════════════════════════════════════════════ */
+
+  /* Sacudida continua del regalo — como si algo estuviera adentro */
+  .gift-wiggle {
+    animation: giftWiggle 1.6s ease-in-out infinite;
+    transform-origin: center bottom;
+  }
+
+  @keyframes giftWiggle {
+    0%   { transform: rotate(0deg)   translateY(0px);   }
+    10%  { transform: rotate(-4deg)  translateY(-4px);  }
+    20%  { transform: rotate(0deg)   translateY(0px);   }
+    30%  { transform: rotate(4deg)   translateY(-4px);  }
+    40%  { transform: rotate(0deg)   translateY(0px);   }
+    50%  { transform: rotate(-3deg)  translateY(-3px);  }
+    60%  { transform: rotate(0deg)   translateY(0px);   }
+    70%  { transform: rotate(3deg)   translateY(-3px);  }
+    80%  { transform: rotate(0deg)   translateY(0px);   }
+    90%  { transform: rotate(-2deg)  translateY(-2px);  }
+    100% { transform: rotate(0deg)   translateY(0px);   }
+  }
+
+  /* Animación de apertura de la caja: salta y se expande */
+  .gift-open-anim {
+    animation: giftOpenBox 1.8s ease-out both;
+    transform-origin: center bottom;
+  }
+
+  @keyframes giftOpenBox {
+    0%   { transform: scale(1)    rotate(0deg);   }
+    15%  { transform: scale(1.05) rotate(-6deg);  }
+    30%  { transform: scale(1.1)  rotate(6deg);   }
+    45%  { transform: scale(1.08) rotate(-4deg);  }
+    60%  { transform: scale(1.15) rotate(3deg);   }
+    75%  { transform: scale(1.2)  rotate(0deg);   }
+    85%  { transform: scale(1.1)  rotate(0deg);   }
+    100% { transform: scale(0)    rotate(0deg); opacity: 0; }
+  }
+
+  /* Tapa del regalo se abre hacia arriba */
+  .gift-lid-open {
+    animation: giftLidOpen 1.2s ease-out 0.1s both;
+    transform-origin: 100px 70px;
+  }
+
+  @keyframes giftLidOpen {
+    0%   { transform: translateY(0px)   rotate(0deg);   opacity: 1; }
+    40%  { transform: translateY(-30px) rotate(-25deg); opacity: 1; }
+    70%  { transform: translateY(-60px) rotate(-45deg); opacity: 0.8; }
+    100% { transform: translateY(-120px) rotate(-60deg); opacity: 0; }
+  }
+
+  /* Lazos se abren hacia los lados */
+  .gift-bow-left {
+    animation: giftBowLeft 1.2s ease-out 0.1s both;
+  }
+
+  @keyframes giftBowLeft {
+    0%   { transform: translateX(0)    rotate(0deg);   opacity: 1; }
+    50%  { transform: translateX(-40px) rotate(-30deg); opacity: 0.7; }
+    100% { transform: translateX(-80px) rotate(-60deg); opacity: 0; }
+  }
+
+  .gift-bow-right {
+    animation: giftBowRight 1.2s ease-out 0.1s both;
+  }
+
+  @keyframes giftBowRight {
+    0%   { transform: translateX(0)    rotate(0deg);  opacity: 1; }
+    50%  { transform: translateX(40px) rotate(30deg); opacity: 0.7; }
+    100% { transform: translateX(80px) rotate(60deg); opacity: 0; }
+  }
+
+  /* Partículas que salen volando */
+  .gift-particle {
+    animation: giftParticle var(--duration, 1s) ease-out both;
+  }
+
+  @keyframes giftParticle {
+    0%   { transform: translateY(0)    scale(0);   opacity: 0; }
+    20%  { transform: translateY(-20px) scale(1.2); opacity: 1; }
+    70%  { transform: translateY(-80px) scale(1);   opacity: 0.8; }
+    100% { transform: translateY(-140px) scale(0.5); opacity: 0; }
+  }
+
+  /* Flash explosion — destello blanco que llena la pantalla */
+  .gift-flash-explosion {
+    animation: giftFlashExplode 0.9s ease-out both;
+    background: radial-gradient(circle at center,
+      rgba(255,255,255,1)  0%,
+      rgba(255,200,210,0.9) 30%,
+      rgba(255,163,176,0.6) 60%,
+      rgba(255,163,176,0)  100%);
+  }
+
+  @keyframes giftFlashExplode {
+    0%   { opacity: 0;   transform: scale(0.3); }
+    15%  { opacity: 1;   transform: scale(1.5); }
+    40%  { opacity: 0.9; transform: scale(2);   }
+    70%  { opacity: 0.5; transform: scale(2.5); }
+    100% { opacity: 0;   transform: scale(3);   }
+  }
+
+  /* Fondo se ilumina brevemente durante el flash */
+  .gift-flash-bg {
+    animation: giftFlashBg 0.9s ease-out both;
+  }
+
+  @keyframes giftFlashBg {
+    0%   { background-color: rgba(0,0,0,0.6); }
+    20%  { background-color: rgba(255,163,176,0.7); }
+    50%  { background-color: rgba(255,255,255,0.9); }
+    100% { background-color: rgba(255,255,255,0); }
+  }
+
+  /* Shake del panel cuando la contraseña es incorrecta */
+  .gift-shake {
+    animation: giftShake 0.55s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+
+  @keyframes giftShake {
+    0%   { transform: translateX(0);    }
+    10%  { transform: translateX(-10px); }
+    25%  { transform: translateX(10px);  }
+    40%  { transform: translateX(-8px);  }
+    55%  { transform: translateX(8px);   }
+    70%  { transform: translateX(-5px);  }
+    85%  { transform: translateX(5px);   }
+    100% { transform: translateX(0);    }
+  }
 }

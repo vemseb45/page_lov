@@ -5,6 +5,7 @@ import { useNuestraHistoria } from '@/frontend/hooks/useNuestraHistoria';
 import { HeroRomantico } from '@/frontend/modules/nuestra_historia/components/HeroRomantico';
 import { LineaDeTiempo } from '@/frontend/modules/nuestra_historia/components/LineaDeTiempo';
 import { CartaAmorFinal } from '@/frontend/modules/nuestra_historia/components/CartaAmorFinal';
+import { GiftModal } from '@/frontend/modules/nuestra_historia/components/GiftModal';
 
 const NAV_LINKS = [
   { label: 'Inicio',          href: '#inicio',   icono: '' },
@@ -42,6 +43,7 @@ function DiscoVinilo() {
 
 export default function NuestraHistoriaPage() {
   const [menuAbierto, setMenuAbierto] = useState(false);
+  const [unlocked, setUnlocked] = useState(false);
 
   const {
     filtroActivo,
@@ -56,6 +58,9 @@ export default function NuestraHistoriaPage() {
 
   return (
     <div className="bg-surface text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container min-h-screen">
+
+      {/* ══════════ GIFT MODAL ══════════════════════════════════════ */}
+      {!unlocked && <GiftModal onUnlock={() => setUnlocked(true)} />}
 
       {/* ══════════ NAVBAR ══════════════════════════════════════ */}
       <header className="fixed top-0 w-full z-50 bg-surface/92 backdrop-blur-md shadow-[0_1px_12px_rgba(108,12,40,0.07)]">
