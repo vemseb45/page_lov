@@ -36,6 +36,42 @@ export function GiftModal({ onUnlock }: GiftModalProps) {
     setEstado('password');
   }
 
+  /**
+   * Formatea la entrada del usuario al patrón DD-MM-AAAA:
+   * - Solo acepta dígitos (ignora cualquier otra tecla)
+   * - Inserta guiones automáticamente después del día y del mes
+   * - Avanza al siguiente segmento automáticamente al completar cada parte
+   */
+  function handlePasswordChange(e: React.ChangeEvent<HTMLInputElement>) {
+    // Extraer solo los dígitos del valor actual
+    const soloDigitos = e.target.value.replace(/\D/g, '');
+
+    // Construir el string formateado con guiones
+    let formateado = '';
+    if (soloDigitos.length <= 2) {
+      formateado = soloDigitos;
+    } else if (soloDigitos.length <= 4) {
+      formateado = soloDigitos.slice(0, 2) + '-' + soloDigitos.slice(2);
+    } else {
+      formateado = soloDigitos.slice(0, 2) + '-' + soloDigitos.slice(2, 4) + '-' + soloDigitos.slice(4, 8);
+    }
+
+    setPassword(formateado);
+    setError(false);
+  }
+
+  /** Bloquea cualquier tecla que no sea dígito, backspace, delete, tab o flechas */
+  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+    const allowed = [
+      'Backspace', 'Delete', 'Tab', 'ArrowLeft', 'ArrowRight',
+      'Home', 'End', 'Enter',
+    ];
+    const isDigit = /^\d$/.test(e.key);
+    if (!isDigit && !allowed.includes(e.key)) {
+      e.preventDefault();
+    }
+  }
+
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (password === PASSWORD_CORRECTA) {
@@ -111,11 +147,10 @@ export function GiftModal({ onUnlock }: GiftModalProps) {
                 <input
                   ref={inputRef}
                   type="text"
+                  inputMode="numeric"
                   value={password}
-                  onChange={(e) => {
-                    setPassword(e.target.value);
-                    setError(false);
-                  }}
+                  onChange={handlePasswordChange}
+                  onKeyDown={handleKeyDown}
                   placeholder="DD-MM-AAAA"
                   maxLength={10}
                   className={[
